@@ -104,3 +104,7 @@ main {
 .course-name:hover {
     color: #658ae9 !important;
 }
+
+.btn-primary, .btn {
+    background-color: #324f9a !important; 
+}

@@ -1,4 +1,5 @@
 {% extends "public/base.html" %}
+{% load static %}
 {% block content %}
     {% if request.user_agent.is_mobile %}
         <div class="text-center embed-responsive embed-responsive-16by9">
@@ -12,7 +13,7 @@
     <div class="about mt-4">
         <h3>What is Sail?</h3>
         <p class="mb-4">
-            Sail is a one-day event held at the Thomas M. Siebel Center for Computer Science. It is completely free to attend, and we'll also provide attendees with breakfast, lunch, dinner, and lots of swag! Come learn more about computer science and life at the University of Illinois through classes taught by current students on topics ranging from Machine Learning and Virtual Reality to The Science of Bitcoin and Texas Hold'em Techniques.        
+            This year, Sail will be a three-day event held virtually in April. It is completely free to attend, and you can participate from your living room! Come learn more about computer science and life at the University of Illinois through classes taught by current students on topics ranging from Machine Learning and Virtual Reality to The Science of Bitcoin and Texas Hold'em Techniques.
         </p>
 
         <h3>Who is Sail for?</h3>
@@ -22,20 +23,15 @@
 
         <h3>When and where is Sail?</h3>
         <p class="mb-4">
-            Sail will be at the Siebel Center for Computer Science at the University of Illinois at Urbana-Champaign. Stay tuned for more information about Sail 2020 as we approach April!
+           Sail will be held virtually this year, to ensure the safety of our students and attendees. The event will take place from Friday, April 2nd to Sunday, April 4th. Stay tuned for more information regarding student registration as we approach April!
         </p>
 
         <h3>What if I'm an admitted student?</h3>
         <p class="mb-4">
-            Admitted students are strongly encouraged to come! You'll get to experience Sail with fellow admitted students, listen to professors and interact more personally with current students. You'll also have the opportunity to participate in information sessions and activities tailored specifically for admitted students like you!        
-        </p>
-
-        <h3>What if I have dietary restrictions?</h3>
-        <p class="mb-4">
-            Don't worry, we will have vegetarian and gluten-free options for all 3 meals! If you have additional restrictions, let us know and we'll do our best to accommodate you.        
+            Students admitted to the University of Illinois are strongly encouraged to come! You'll get to experience Sail with fellow admitted students, listen to professors and interact more personally with current students. You'll also have the opportunity to participate in information sessions and activities tailored specifically for admitted students like you!
         </p>
 
         <h3>Other questions?</h3>
-        <p class="mb-4">Please don’t hesitate to contact us at <a class="contact-us-link" target="_blank" href="mailto:cs-sail@lists.cs.illinois.edu">cs-sail@lists.cs.illinois.edu</a>.</p>
+        <p class="mb-4"> Please don’t hesitate to contact us at <a class="contact-us-link" target"_blank" href="mailto:cs-sail@lists.cs.illinois.edu">cs-sail@lists.cs.illinois.edu</a>. We’ll get back to you as soon as possible!</p>
     </div>
 {% endblock content %}
