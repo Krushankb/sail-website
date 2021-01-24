@@ -8,3 +8,6 @@ def about(request):
 
 def staff(request):
     return render(request, 'public/staff.html', {'title':'Staff', 'display_footer':True})
+
+def teachers(request):
+    return render(request, 'public/teacher-info.html', {'title': 'Teacher Info', 'display_footer': True})

@@ -1,0 +1,95 @@
+{% extends "public/base.html" %}
+{% load static %}
+{% block content %}
+<div class="teacher-home markdown-body">
+    <h1>Sail Teacher Guide</h1>
+    <p>On April 3-4<sup>th</sup>, hundreds of high schoolers will join us for a day of classes taught by college students! Sail's goal is to teach high schoolers about the various exciting topics in computer science. Prospective and admitted students for UIUC can attend for free, and will choose their class schedule for the day. As a teacher, you will be able to have a significant impact on these high schoolers and show them what it's like to be college student and learn computer science here at Illinois!</p>
+
+    <div class="teacher-action-buttons">
+        <a class="btn btn-primary" href="{% url 'users-register-teacher' %}">Register</a>
+        <a class="btn btn-primary" href="{% url 'users-login' %}">Log In</a>
+        <!-- <p ng-if="!current_user.logged_in"><br><strong>Teacher registration is closed.</strong></p> -->
+    </div>
+    <br>
+
+    <h2>Teacher Timeline</h2>
+
+    <table class="table table-hover">
+        <tbody>
+            <tr>
+                <td>2/27</td>
+                <td>Teacher Registration Deadline</td>
+            </tr>
+            <tr>
+                <td>3/21</td>
+                <td>Slides Due for Review</td>
+            </tr>
+            <tr>
+                <td>4/1 (Tentative)</td>
+                <td>Teacher Mass Meeting</td>
+            </tr>
+            <tr>
+                <td>4/3-4/4</td>
+                <td>Sail!</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Sail Tech Help Instructional Video</h3>
+    <iframe width="90%" height="100%" src="https://www.youtube.com/embed/Hkb2SvVg9QU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <h2>Teacher FAQs</h2>
+    <!-- <p class="question">What other courses have been submitted?</p>
+    <p><a target="_blank" href="/static/assets/curr_courses.pdf">Here's a list.</a></p> -->
+    <h3 class="question">What can I teach?</h3>
+    <div>
+        <p>Feel free to check out our <strong><a target="_blank" href="/static/assets/course_ideas.pdf">BIG LIST OF IDEAS</a></strong> for a bunch of suggestions. Here are a few:</p>
+        <ul>
+            <li>Cybersecurity Ninja Training</li>
+            <li>Digital Art: Drawing &amp; Animations</li>
+            <li>Making Music with Machines</li>
+            <li>Creating Your Own Personal Website</li>
+            <li>Designing Your First Video Game </li>
+            <li>FIRST Robotics for Beginners </li>
+            <li>Hackathons 101: Everything You Need To Know</li>
+            <li>Transforming Your Kitchen Into a Mad Science Lab</li>
+            <li>How to Survive a Zombie Apocalypse </li>
+            <li>Lifehacks: Uncommon Solutions to Common Problems</li>
+        </ul>
+        <p>...or literally anything else you’re interested in teaching!</p>
+        <p>We’re looking for excitement in teachers, and we hope students will learn a little about Illinois in the process! Everyone has something they’re passionate about. If you love it, you can teach it!</p>
+    </div>
+
+    <h3 class="question">How long should my class be?</h3>
+    <p>By default, classes will last 50 minutes, although you can request something longer if necessary. Classes will be scheduled in Siebel by the Sail team between 10am and 6pm on Saturday, April 4<sup>th</sup>. We'll check with you on scheduling conflicts before we schedule your class. Please be sure to show up 15 minutes before your class actually begins!</p>
+
+    <h3 class="question">What kind of a commitment is this?</h3>
+    <p>By creating a course listing, you're committing to teaching this course on Saturday, April 4<sup>th</sup>. You'll also need to attend a teacher training session.</p>
+
+    <h3 class="question">How do I structure my course?</h3>
+    <p>
+        You can see two sample lesson plans here:<br>
+        <a href="https://docs.google.com/document/d/1yruFUtItwSI24hX3lzwNQyD9q2ZqywGWM2y5Y8CEfUM/edit?usp=sharing" target="_blank">Build a Game in Python: Rock-Paper-Scissors</a><br>
+        <a href="https://docs.google.com/a/illinois.edu/document/d/1aSCAbgz71sO_wPJv5O0nGviQB9pl5S9XLp9V2fSk8VA/edit?usp=sharing" target="_blank">Crafts with Computer Parts</a>
+    </p>
+
+    <h3>Can multiple teachers teach a course together?</h3>
+    <p>Absolutely! We want students coming here to get the attention they deserve and sometimes the only way to ensure that is multiple teachers. Get your friends to sign up and spread the word :)</p>
+
+    <h3 class="question">What is the capacity limit for a course? Do I need to care about it?</h3>
+    <p>If, ignoring location, your course has a limited capacity (e.g. it requires a limited resource), you can let us know when you create a course. Otherwise, leave it blank and we'll make sure you're in a room that fits!</p>
+
+    <h3 class="question">What's a teacher mass meeting?</h3>
+    <p>During the week leading up to Sail, our staff will hold a meeting of all teachers teaching a course at the event. We typically do this to make sure that you're all set to teach and understand your responsibilities on the day of.</p>
+
+    <h3 class="question">What are One-on-One Meetings? Why do you want me to submit my slides?</h3>
+    <p>Great questions. Before we let students sign up for your course, we'll invite you to meet in person with a member of the Sail team to talk about your course and go over some of the event logistics. Conversely, in the week leading in to Sail, we will have staff members going through your slides to make sure that they're ready for students.</p>
+
+    <h3 class="question">I forgot my password, or want to change it.</h3>
+    <p>Reset it from the <a href= "{% url 'users-login'%}">login page</a>.</p>
+
+    <h3 class="question">I have a question not listed here, found a bug, or have a creative idea!</h3>
+    <p>We want to hear from you! Email us at <a href="mailto:cs-sail@lists.cs.illinois.edu">cs-sail@lists.cs.illinois.edu</a>.</p>
+
+</div>
+{% endblock content %}
