@@ -104,7 +104,7 @@ DATABASES = {
      'default': {
          'ENGINE': 'django.db.backends.mysql',
          'OPTIONS': {
-         'read_default_file': '/var/www/sail-website/sail/my.conf',
+         'read_default_file': '/var/www/sail-website/sail/my.cnf',
          },
      }
 
