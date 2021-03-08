@@ -114,9 +114,9 @@ main {
 }
 
 .text-left {
-    text-align: left;
+    float: left;
 }
 
 .text-right {
-    text-align: right;
+    float: right;
 }
