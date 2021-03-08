@@ -4,7 +4,7 @@ html, body {
 
 body {
     background: #fafafa;
-    color: #333333;
+    color: #365095;
     margin-top: 5rem;
 }
 
@@ -94,7 +94,11 @@ main {
 }
 
 .contact-us-link {
-    color: #E35531;
+    color: #BF8A88;
+}
+
+.contact-us-link:hover {
+    color: #e3e3e3;
 }
 
 .about p {
@@ -107,4 +111,12 @@ main {
 
 .btn-primary, .btn {
     background-color: #324f9a !important; 
+}
+
+.text-left {
+    float: left;
+}
+
+.text-right {
+    float: right;
 }

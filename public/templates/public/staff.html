@@ -3,12 +3,159 @@
 {% block content %}
     <div class="text-center">
         {% if request.user_agent.is_mobile %}
-            <h2>2019-2020 Sail Staff</h2>
-            <img src="{% static 'public/staff_group_photo.png' %}" alt="Sail Staff Group Photo" class="w-100">
+            <h2>2020-2021 Sail Staff</h2>
+            <!-- <img src="../public/staff_group_photo.png" alt="Sail Staff Group Photo" class="w-100"> -->
         {% else %}
-            <h1>2019-2020 Sail Staff</h1>
-            <img src="{% static 'public/staff_group_photo.png' %}" alt="Sail Staff Group Photo" class="w-50">
+            <h1>2020-2021 Sail Staff</h1>
+            <!-- <img src="{% static 'public/staff_group_photo.png' %}" alt="Sail Staff Group Photo" class="w-50"> -->
         {% endif %}
-        <p class="mt-4">We will post bios of new staff members here soon!</p>
+    </div>
+    <div class="text-align">
+        <div style="height:15px;"><br></div>
+
+        <style>
+
+            #blopWrapper {
+              display: flex;
+              flex-direction:row;
+            }
+
+            .container {
+              position: relative;
+              /* width: 50%; */
+            }
+            
+            .image {
+              /* display: block; */
+              width: 300px;
+              height: 400px;
+              /* height: auto; */
+            }
+            
+            .overlay {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 15px;
+              right: 0;
+              width: 300px;
+              height: 400px;
+              opacity: 0;
+              transition: .5s ease;
+              background-color: #008CBA;
+            }
+            
+            .container:hover .overlay {
+              opacity: 1;
+            }
+
+            .name {
+              color: white;
+              font-size: 30px;
+              position:relative;
+              top: 15%;
+              left: 75%;
+              /* width: 250px; */
+              -webkit-transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+              /* text-align: center; */
+            }
+            
+            .text {
+              color: white;
+              font-size: 14px;
+              position: absolute;
+              top: 60%;
+              left: 50%;
+              width: 250px;
+              -webkit-transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+              /* text-align: center; */
+            }
+        </style>
+
+        <div id="blopWrapper">
+            <div class="container">
+                <img src="{% static 'public/Sadia_Ahmed.jpeg' %}" alt="Avatar" class="image">
+                <div class="overlay">
+                <div class="name">Sadia Ahmed</div>
+                <div class="text">Sadia Ahmed Hi everybody! My name is Sadia and I am the director for Sail this year! I’m a junior in computer science, and have also been involved in Society of Women Engineers and am a freshman orientation leader for Women in Engineering. I also really enjoy eating sushi, drinking coffee, and collecting earrings. The Sail Staff team has worked extra hard this year to put on a great event, and we are so excited to see you there!</div>
+                </div>
+            </div>
+
+            <div class="container">
+                <img src="{% static 'public/Varun_Nair.jpeg' %}" alt="Avatar" class="image">
+                <div class="overlay">
+                <div class="name">Varun Nair</div>
+                <div class="text">Hey guys! I’m Varun and I’m a freshman and part of the logistics team here at Sail. Apart from Sail, I’m also involved in OTCR Consulting and ACM. I really enjoy watching movies (Ratatouille being one of my favorites), eating from new restaurants, and playing with LEGOs. I look forward to getting to know all of you at Sail 2021’s amazing event!</div>
+                </div>
+            </div>
+
+            <div class="container">
+                <img src="{% static 'public/Ariane_Taraki.jpg' %}" alt="Avatar" class="image">
+                <div class="overlay">
+                <div class="name">Ariane Taraki</div>
+                <div class="text">Hello! My name is Ariane Taraki and I am currently a staff member on the Sail 2021 Outreach team! I am a Sophomore majoring in Computer Science and Anthropology, and I am also the Outreach Chair for Women in Computer Science, an RSO on campus focused on spreading female-driven Computer Science education. I love watching rom-coms and hanging out with friends in my free time. Make sure to check out Sail to learn more about what CS at UIUC has to offer!</div>
+                </div>
+            </div>
+        </div>
+
+        <div style="height:50px;"><br></div>
+
+        <div id="blopWrapper">
+            <div class="container">
+                <img src="{% static 'public/AnjaliKum.png' %}" alt="Avatar" class="image">
+                <div class="overlay">
+                <div class="name">Anjali Kumar</div>
+                <div class="text">Hi y'all! Welcome to Sail! My name’s Anjali and I’m a freshman part of the website team. I’m studying computer science and am also part of HackIllinois, WCS, and SWE. I really like watching documentaries and mini-series on Netflix, meeting new people, and practicing music. I hope you enjoy this (virtual) experience and are as excited as we are to get this event started!</div>
+                </div>
+            </div>
+
+            <div class="container">
+                <img src="{% static 'public/Hari_Umesh.jpeg' %}" alt="Avatar" class="image">
+                <div class="overlay">
+                    <div class="name">Hari Umesh</div>
+                <div class="text">What’s up everyone! I’m Hari and I am a part of the outreach staff for Sail 2021! I’m a freshman Statistics & Computer Science student, and I am currently involved with Illini Stats Club as well. I’m a die-hard Lakers fan, but I recently completed a 1000 piece puzzle over the winter break! You can find me in the ARC either on the track or on the basketball courts! I’m super excited for Sail 2021 and look forward to seeing you all there!</div>
+                </div>
+            </div>
+
+            <div class="container">
+                <img src="{% static 'public/Daniel.png' %}" alt="Avatar" class="image">
+                <div class="overlay">
+                <div class="name">Daniel Moon</div>
+                <div class="text">Hello! My name is Daniel and I'm a freshman majoring in Computer Science working on the website team. I'm also involved with Hack4Impact and Reflections | Projections. I really enjoy playing video games, reading, and listening to good classical music. SAIL 2021 is going to be really exciting and I hope to meet you all there!</div>
+                </div>
+            </div>
+        </div>
+
+        <div style="height:50px;"><br></div>
+
+        <div id="blopWrapper">
+            <div class="container">
+                <img src="{% static 'public/Aabha.png' %}" alt="Avatar" class="image">
+                <div class="overlay">
+                <div class="name">Aabha Vyas</div>
+                <div class="text">Hi guys! My name is Aabha and I am a freshman studying Computer Science. This year I am on the design team for Sail 2021! I’m also involved in the professional business fraternity Alpha Kappa Psi on campus. I really enjoy going to music festivals, hiking and learning how to roll sushi. I am super excited to meet all of you at Sail’s virtual event!</div>
+                </div>
+            </div>
+
+            <div class="container">
+                <img src="{% static 'public/Salman_Shaheen.jpeg' %}" alt="Avatar" class="image">
+                <div class="overlay">
+                <div class="name">Salman Shaheen</div>
+                <div class="text">Hello! My name is Salman, and I’m currently serving on the logistics team for Sail 2021! I’m a freshman studying Statistics and Computer Science, and I’m also involved in HackIllinois and Illinois Student Government. I’m passionate about STEM outreach, comics, and lots of caffeine. Looking forward to meeting you all in April!</div>
+                </div>
+            </div>
+
+            <div class="container">
+                <img src="{% static 'public/staff_group_photo.png' %}" alt="Avatar" class="image">
+                <div class="overlay">
+                <div class="name">Ayushi Singh</div>
+                <div class="text">Hi everyone! My name is Ayushi, and I am the advisor for Sail 2021. Previously, I’ve been involved with Women in Computer Science, ACM, Reflections | Projections, Hackillinois, and Sail. Outside of school, I enjoy playing tennis, reading, and hiking. I look forward to meeting you all virtually at Sail 2021!</div>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock content %}
