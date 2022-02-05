@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import os.path
+import pymysql
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -27,6 +29,7 @@ DEBUG = True #False when not debugging
 
 ALLOWED_HOSTS = ['*']
 
+pymysql.install_as_MySQLdb()
 
 # Application definition
 
@@ -103,6 +106,9 @@ WSGI_APPLICATION = 'sail.wsgi.application'
 DATABASES = {
      'default': {
          'ENGINE': 'django.db.backends.mysql',
+         'NAME': os.environ['DATABASE_NAME'],
+         'USER': os.environ['DATABASE_USER'],
+         'PASSWORD': os.environ['DATABASE_PASSWORD'],
          'OPTIONS': {
          'read_default_file': '/var/www/sail-website/sail/my.cnf',
          },
@@ -151,9 +157,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = ''
 STATIC_URL = '/static/'
-
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+    )
 # Custom settings 
 
 AUTH_USER_MODEL = 'users.SailUser'   # tells Django to use our custom SailUser as default user model
@@ -163,11 +173,11 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'  # tells 'crispy_forms' to use bootstrap4
 LOGIN_REDIRECT_URL = 'sail-home'     # where to redirect already-logged-in users if they go to the login page
 LOGIN_URL = 'users-login'            # name of url where users login (defined in sail/urls.py)
 
+EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ['EMAIL_USERNAME']
 EMAIL_HOST_PASSWORD = os.environ['EMAIL_PWD']
+EMAIL_PORT = 587
 
 SITE_ID = 1
